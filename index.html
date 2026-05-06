@@ -8,10 +8,8 @@
             [0, 3, 4]
         ];
 
-        // INVENTORY: add any items available when the game starts
-        let ITEMS = ['stardust'];
-        let ITEMS = ['cookie'];
-        let ITEMS = ['tube'];
+        let ITEMS = [];
+
 
         // MAIN INFO: enter the scenes welcome text (ascending order)
         const TEXT = [
@@ -41,6 +39,14 @@
             <img id="space6" src="scene6.png">
             <img id="space7" src="scene7.png">
             <img id="space8" src="scene8.png">
+            <a-asset-item id="cookie" src="cookie.glb"></a-asset-item>
+            <a-asset-item id="tube" src="tube.glb"></a-asset-item>
+            <a-asset-item id="stardust" src="stardust.glb"></a-asset-item>
+            <audio id="NPC_Info" src=""></audio>
+            <audio id="MECHANIC_NPC" src=""></audio>
+            <audio id="MERCHANT_NPC" src=""></audio>
+            <audio id="COLLECT" src=""></audio>
+          
         </a-assets>
         <a-sky id="sky" rotation="0 -90 0"></a-sky>
 
@@ -68,7 +74,7 @@
        
       <!-- 4th SCENE -->
          <a-entity id="space4" class="scene" visible="false">
-            <a-cylinder class="interactive" position="-1.25 0.75 -4" scale="0.5 3 0.5" visible="false" drop="a tube"
+            <a-cylinder class="interactive" position="-1.25 0.75 -4" scale="0.5 3 0.5" visible="false" drop="tube"
                 over="goal" goal='" Lets fix it now"'
                 fail='"Go find it"'>
               </a-cylinder>
@@ -76,7 +82,7 @@
       
       <!-- 5th SCENE -->
       <a-entity id="space5" class="scene" visible="false">
-            <a-cylinder class="interactive" position="-1.25 0.75 -4" scale="0.5 3 0.5" visible="false" drop="a cookie"
+            <a-cylinder class="interactive" position="-1.25 0.75 -4" scale="0.5 3 0.5" visible="false" drop="cookie"
                 over="goal" goal='"Stupid human!! I got no item, I gave it to alien"'
                 fail='"I am not giving you nothing"'>
             </a-cylinder>
@@ -85,7 +91,7 @@
 
       <!-- 6th SCENE -->
         <a-entity id="space6" class="scene"></a-entity>
-      
+       pick="cookie"
       
         <!-- 7th SCENE -->
         <a-entity id="space7" class="scene"></a-entity>
