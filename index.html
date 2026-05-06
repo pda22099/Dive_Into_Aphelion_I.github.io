@@ -9,16 +9,19 @@
         ];
 
         // INVENTORY: add any items available when the game starts
-        let ITEMS = ['a watch'];
+        let ITEMS = ['stardust'];
+        let ITEMS = ['cookie'];
 
         // MAIN INFO: enter the scenes welcome text (ascending order)
         const TEXT = [
-            'You are walking on a narrow path.\nThere is an old store house beside.',
-            'A man is sitting behind a table:\n"Hi, do you have something for me?"',
-            'You are in the middle of a field.\nA policeman is standing by his car.',
-            'There is a small harbor here.\nThe sailor is ready to depart...',
-            'You are at the center of a village.\nA begar is asking for help!',
-            'You are standing inside a church.\nThe priest is silently praying...'
+            'OH NOO...Our spaceship crashed.\nShit...We are running out of oxygen.\nI need to find my tablet.',
+            'You are standing inside your spaceship.\nYour tablet might be somewhere in here',
+            'DIVE INTO APHELION I'
+            'You are in the middle of nowhere.\nIt seems that someone is watching you.',
+            'You are at the biginning of a random town of Aphelion I.\n"I need to find a tube.',
+            '"Maaaaaan. I cannot believe I walked all this way for a cookie.',
+            'You are at a park.',
+            'The stardust might be somewhere around here.\nLets just find it quickly.\nWE ARE RUNNING OUT  OF TIME'
         ];
     </script>
     <script src="game-logic.js"></script>
@@ -27,14 +30,16 @@
 <body>
     <a-scene cursor="rayOrigin: mouse" raycaster="objects: .interactive" game-logic>
 
-        <!-- SKY IMAGES -->
+        <!-- SPACE IMAGES -->
         <a-assets>
-            <img id="space 1" src="scene1.png">
+            <img id="space1" src="scene1.png">
             <img id="space2" src="scene2.png">
             <img id="space3" src="scene3.png">
             <img id="space4" src="scene4.png">
             <img id="space5" src="scene5.png">
             <img id="space6" src="scene6.png">
+            <img id="space7" src="scene7.png">
+            <img id="space8" src="scene8.png">
         </a-assets>
         <a-sky id="sky" rotation="0 -90 0"></a-sky>
 
@@ -51,48 +56,52 @@
         </a-camera>
 
         <!-- 1st SCENE -->
-        <a-entity id="scene1" class="scene"></a-entity>
+        <a-entity id="space1" class="scene"></a-entity>
 
         <!-- 2nd SCENE -->
-        <a-entity id="scene2" class="scene" visible="false">
-            <a-cylinder class="interactive" position="-3 1 -4" scale="0.5 2 0.5" visible="false" drop="a watch"
-                pick="some money" goal='"Nice stuff,\nI will pay for it!"'
-                fail='"Have a nice day foreigner,\nI need to work now."'>
-            </a-cylinder>
-        </a-entity>
+           <a-entity id="space2" class="scene"></a-entity>
+           
 
         <!-- 3rd SCENE -->
-        <a-entity id="scene3" class="scene" visible="false">
-            <a-cylinder class="interactive" position="-1.25 0.75 -4" scale="0.5 3 0.5" visible="false" drop="a cross"
-                over="goal" goal='"Well, seems we have a thief here!\nYou are under arrest..."'
-                fail='"Goodmorning!\nEverything looks perfect today..."'>
+       <a-entity id="space3" class="scene"></a-entity>
+       
+      <!-- 4th SCENE -->
+         <a-entity id="space4" class="scene" visible="false">
+            <a-cylinder class="interactive" position="-1.25 0.75 -4" scale="0.5 3 0.5" visible="false" drop="a tube"
+                over="goal" goal='" Lets fix it now"'
+                fail='"Go find it"'>
+              </a-cylinder>
+        </a-entity>
+      
+      <!-- 5th SCENE -->
+      <a-entity id="space5" class="scene" visible="false">
+            <a-cylinder class="interactive" position="-1.25 0.75 -4" scale="0.5 3 0.5" visible="false" drop="a cookie"
+                over="goal" goal='"Stupid human!! I got no item, I gave it to alien"'
+                fail='"I am not giving you nothing"'>
+            </a-cylinder>
+        </a-entity>
+   <!--prepei na parei to cookie -->
+
+      <!-- 6th SCENE -->
+        <a-entity id="space6" class="scene"></a-entity>
+      
+      
+        <!-- 7th SCENE -->
+        <a-entity id="space7" class="scene"></a-entity>
+      <a-entity id="space6" class="scene" visible="false">
+            <a-cylinder class="interactive" position="-1.25 0.75 -4" scale="0.5 3 0.5" visible="false" drop="stardust"
+                over="goal" goal='"Thaaaanks dude".\nHere is your tube"'
+                fail='"Did you bring it yet?"'>
             </a-cylinder>
         </a-entity>
 
-        <!-- 4th SCENE -->
-        <a-entity id="scene4" class="scene" visible="false">
-            <a-cylinder class="interactive" position="4 2 1" scale="0.5 1 0.5" visible="false" drop="some money"
-                over="goal" goal="You made it...\nYou are free to sail away!"
-                fail='"Hello there,\nno place for you on my boat..."'>
-            </a-cylinder>
+      
+        <!-- 8th SCENE -->
+         <a-entity id="space8" class="scene" visible="false">
+            pick="stardust"
         </a-entity>
 
-        <!-- 5th SCENE -->
-        <a-entity id="scene5" class="scene" visible="false">
-            <a-cylinder class="interactive" position="-4 -1.5 2.5" visible="false" drop="some money"
-                goal='"God bless you stranger!"\n' fail='"I am old, sick and hungry..."\n'>
-            </a-cylinder>
-        </a-entity>
-
-        <!-- 6th SCENE -->
-        <a-entity id="scene6" class="scene" visible="false">
-            <a-cylinder class="interactive" position="60 5 85" rotation="0 -150 0" radius="3" height="30"
-                color="goldenrod" pick="a cross">
-                <a-cylinder position="0 6 0" radius="3" height="15" rotation="0 0 90" color="goldenrod"></a-cylinder>
-                <a-cylinder position="0 -15 0" color="goldenrod" radius="5" height="2"></a-cylinder>
-            </a-cylinder>
-        </a-entity>
-
+      
     </a-scene>
 </body>
 
