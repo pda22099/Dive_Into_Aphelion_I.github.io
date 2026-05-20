@@ -31,7 +31,7 @@
 
         <!-- SPACE IMAGES -->
         <a-assets>
-            <img id="sky1" src="scene1.png">
+            <img id="sky1" src="onoma fakelou/scene1.png">
             <img id="sky2" src="scene2.png">
             <img id="sky3" src="scene3.png">
             <img id="sky4" src="scene4.png">
@@ -90,15 +90,17 @@
    <!--prepei na parei to cookie -->
 
       <!-- 6th SCENE -->
-        <a-entity id="scene6" class="scene"></a-entity>
-       pick="cookie"
+        <a-entity id="scene6" class="scene" visible="false">
+            <a-entity gltf-model="#cookie" scale=  pick="cookie"></a-entity>
+        </a-entity>
       
         <!-- 7th SCENE -->
         <a-entity id="scene7" class="scene"></a-entity>
+      
       <a-entity id="scene6" class="scene" visible="false">
             <a-cylinder class="interactive" position="-1.25 0.75 -4" scale="0.5 3 0.5" visible="false" drop="stardust"
                 over="goal" goal='"Thaaaanks dude".\nHere is your tube"'
-                fail='"Did you bring it yet?"'>
+                  fail='"I want the stardust from the ally. "'>
             </a-cylinder>
         </a-entity>
 
