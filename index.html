@@ -31,14 +31,14 @@
 
         <!-- SPACE IMAGES -->
         <a-assets>
-            <img id="space1" src="scene1.png">
-            <img id="space2" src="scene2.png">
-            <img id="space3" src="scene3.png">
-            <img id="space4" src="scene4.png">
-            <img id="space5" src="scene5.png">
-            <img id="space6" src="scene6.png">
-            <img id="space7" src="scene7.png">
-            <img id="space8" src="scene8.png">
+            <img id="sky1" src="scene1.png">
+            <img id="sky2" src="scene2.png">
+            <img id="sky3" src="scene3.png">
+            <img id="sky4" src="scene4.png">
+            <img id="sky5" src="scene5.png">
+            <img id="sky6" src="scene6.png">
+            <img id="sky7" src="scene7.png">
+            <img id="sky8" src="scene8.png">
             <a-asset-item id="cookie" src="cookie.glb"></a-asset-item>
             <a-asset-item id="tube" src="tube.glb"></a-asset-item>
             <a-asset-item id="stardust" src="stardust.glb"></a-asset-item>
@@ -63,17 +63,17 @@
         </a-camera>
 
         <!-- 1st SCENE -->
-        <a-entity id="space1" class="scene"></a-entity>
+        <a-entity id="scene1" class="scene"></a-entity>
 
         <!-- 2nd SCENE -->
-           <a-entity id="space2" class="scene"></a-entity>
+           <a-entity id="scene2" class="scene"></a-entity>
            
 
         <!-- 3rd SCENE -->
-       <a-entity id="space3" class="scene"></a-entity>
+       <a-entity id="scene3" class="scene"></a-entity>
        
       <!-- 4th SCENE -->
-         <a-entity id="space4" class="scene" visible="false">
+         <a-entity id="scene4" class="scene" visible="false">
             <a-cylinder class="interactive" position="-1.25 0.75 -4" scale="0.5 3 0.5" visible="false" drop="tube"
                 over="goal" goal='" Lets fix it now"'
                 fail='"Go find it"'>
@@ -81,7 +81,7 @@
         </a-entity>
       
       <!-- 5th SCENE -->
-      <a-entity id="space5" class="scene" visible="false">
+      <a-entity id="scene5" class="scene" visible="false">
             <a-cylinder class="interactive" position="-1.25 0.75 -4" scale="0.5 3 0.5" visible="false" drop="cookie"
                 over="goal" goal='"Stupid human!! I got no item, I gave it to alien"'
                 fail='"I am not giving you nothing"'>
@@ -90,12 +90,12 @@
    <!--prepei na parei to cookie -->
 
       <!-- 6th SCENE -->
-        <a-entity id="space6" class="scene"></a-entity>
+        <a-entity id="scene6" class="scene"></a-entity>
        pick="cookie"
       
         <!-- 7th SCENE -->
-        <a-entity id="space7" class="scene"></a-entity>
-      <a-entity id="space6" class="scene" visible="false">
+        <a-entity id="scene7" class="scene"></a-entity>
+      <a-entity id="scene6" class="scene" visible="false">
             <a-cylinder class="interactive" position="-1.25 0.75 -4" scale="0.5 3 0.5" visible="false" drop="stardust"
                 over="goal" goal='"Thaaaanks dude".\nHere is your tube"'
                 fail='"Did you bring it yet?"'>
@@ -104,8 +104,8 @@
 
       
         <!-- 8th SCENE -->
-         <a-entity id="space8" class="scene" visible="false">
-            pick="stardust"
+         <a-entity id="scene8" class="scene" visible="false">
+            <a-entity gltf-model="#stardust" scale=  pick="stardust"></a-entity>
         </a-entity>
 
       
