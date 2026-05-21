@@ -54,10 +54,17 @@
         <a-camera wasd-controls="enabled:false">
             <a-plane color="#000" height="0.3" opacity="0.25" position="0 -0.6 -1">
                 <a-text id="info" width="1" value="" font="monoid" align="center"></a-text>
-                <a-cone id="east" scale="0.05 0.05 0.05" position="0.55 0 0" rotation="0 -30 -88"></a-cone>
-                <a-cone id="west" scale="0.05 0.05 0.05" position="-0.55 0 0" rotation="0 30 88"></a-cone>
-                <a-cone id="north" scale="0.05 0.05 0.05" position="0 0.2 0" rotation="-20 0 0"></a-cone>
-                <a-cone id="south" scale="0.05 0.05 0.05" position="0 -0.2 0" rotation="-40 0 180"></a-cone>
+               <!-- Βέλος ΠΑΝΩ (north) -->
+<a-cone id="north" scale="0.06 0.08 0.06" position="0 0.22 0" rotation="0 0 0" color="white"></a-cone>
+
+<!-- Βέλος ΚΑΤΩ (south) -->
+<a-cone id="south" scale="0.06 0.08 0.06" position="0 -0.22 0" rotation="180 0 0" color="white"></a-cone>
+
+<!-- Βέλος ΑΡΙΣΤΕΡΑ (west) -->
+<a-cone id="west" scale="0.06 0.08 0.06" position="-0.55 0 0" rotation="0 0 90" color="white"></a-cone>
+
+<!-- Βέλος ΔΕΞΙΑ (east) -->
+<a-cone id="east" scale="0.06 0.08 0.06" position="0.55 0 0" rotation="0 0 -90" color="white"></a-cone>
             </a-plane>
             <a-cursor fuse="true"></a-cursor>
         </a-camera>
