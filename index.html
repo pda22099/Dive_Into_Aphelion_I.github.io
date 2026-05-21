@@ -30,13 +30,13 @@
 
         <!-- SPACE IMAGES -->
         <a-assets>
-            <img id="scene1" src="aphelion1.png">
-            <img id="scene2" src="spaceship_inside.png">
-            <img id="scene3" src="aphelion_mixanikos.png">
-            <img id="scene4" src="town_inside.png">
-            <img id="scene5" src="store.png">
-            <img id="scene6" src="park.png">
-            <img id="scene7" src="dark_alley.png">
+            <img id="sky1" src="aphelion1.png">
+            <img id="sky2" src="spaceship_inside.png">
+            <img id="sky3" src="aphelion_mixanikos.png">
+            <img id="sky4" src="town_inside.png">
+            <img id="sky5" src="store.png">
+            <img id="sky6" src="park.png">
+            <img id="sky7" src="dark_alley.png">
             <a-asset-item id="cookie" src="cookie.glb"></a-asset-item>
             <a-asset-item id="tube" src="tube.glb"></a-asset-item>
             <a-asset-item id="stardust" src="stardust.glb"></a-asset-item>
@@ -61,14 +61,14 @@
         </a-camera>
 
         <!-- 1st SCENE -->
-        <a-entity id="scene1" class="scene"></a-entity>
+        <a-entity id="aphelion1" class="scene"></a-entity>
 
         <!-- 2nd SCENE -->
-           <a-entity id="scene2" class="scene"></a-entity>
+           <a-entity id="spaceship_inside" class="scene"></a-entity>
            
        
       <!-- 3th SCENE -->
-         <a-entity id="scene3" class="scene" visible="false">
+         <a-entity id="aphelion_mixanikos" class="scene" visible="false">
             <a-cylinder class="interactive" position="-1.25 0.75 -4" scale="0.5 3 0.5" visible="false" drop="tube"
                 over="goal" goal='" Lets fix it now"'
                 fail='"Go find it"'>
@@ -76,7 +76,7 @@
         </a-entity>
       
       <!-- 4th SCENE -->
-      <a-entity id="scene4" class="scene" visible="false">
+      <a-entity id="town_inside" class="scene" visible="false">
             <a-cylinder class="interactive" position="-1.25 0.75 -4" scale="0.5 3 0.5" visible="false" drop="cookie"
                 over="goal" goal='"Stupid human!! I got no item, I gave it to alien"'
                 fail='"I am not giving you nothing"'>
@@ -85,13 +85,13 @@
    <!--prepei na parei to cookie -->
 
       <!-- 5th SCENE -->
-        <a-entity id="scene5" class="scene" visible="false">
+        <a-entity id="store" class="scene" visible="false">
             <a-entity gltf-model="#cookie" scale=  pick="cookie"></a-entity>
         </a-entity>
 
       
       
-      <a-entity id="scene6" class="scene" visible="false">
+      <a-entity id="park" class="scene" visible="false">
             <a-cylinder class="interactive" position="-1.25 0.75 -4" scale="0.5 3 0.5" visible="false" drop="stardust"
                 over="goal" goal='"Thaaaanks dude".\nHere is your tube"'
                   fail='"I want the stardust from the ally. "'>
@@ -100,7 +100,7 @@
 
       
         <!-- 7th SCENE -->
-         <a-entity id="scene7" class="scene" visible="false">
+         <a-entity id="dark_alley" class="scene" visible="false">
             <a-entity gltf-model="#stardust" scale=  pick="stardust"></a-entity>
         </a-entity>
 
