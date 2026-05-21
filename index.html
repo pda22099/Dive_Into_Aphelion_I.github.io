@@ -15,7 +15,6 @@
         const TEXT = [
             'OH NOO...Our spaceship crashed.\nShit...We are running out of oxygen.\nI need to find my tablet.',
             'You are standing inside your spaceship.\nYour tablet might be somewhere in here',
-            'DIVE INTO APHELION I',
             'You are in the middle of nowhere.\nIt seems that someone is watching you.',
             'You are at the biginning of a random town of Aphelion I.\n"I need to find a tube.',
             '"Maaaaaan. I cannot believe I walked all this way for a cookie.',
@@ -31,14 +30,13 @@
 
         <!-- SPACE IMAGES -->
         <a-assets>
-            <img id="sky1" src="aphelion1.png">
-            <img id="sky2" src="scene2.png">
-            <img id="sky3" src="scene3.png">
-            <img id="sky4" src="scene4.png">
-            <img id="sky5" src="scene5.png">
-            <img id="sky6" src="scene6.png">
-            <img id="sky7" src="scene7.png">
-            <img id="sky8" src="scene8.png">
+            <img id="scene1" src="aphelion1.png">
+            <img id="scene2" src="spaceship_inside.png">
+            <img id="scene3" src="aphelion_mixanikos.png">
+            <img id="scene4" src="town_inside.png">
+            <img id="scene5" src="store.png">
+            <img id="scene6" src="park.png">
+            <img id="scene7" src="dark_alley.png">
             <a-asset-item id="cookie" src="cookie.glb"></a-asset-item>
             <a-asset-item id="tube" src="tube.glb"></a-asset-item>
             <a-asset-item id="stardust" src="stardust.glb"></a-asset-item>
@@ -68,20 +66,17 @@
         <!-- 2nd SCENE -->
            <a-entity id="scene2" class="scene"></a-entity>
            
-
-        <!-- 3rd SCENE -->
-       <a-entity id="scene3" class="scene"></a-entity>
        
-      <!-- 4th SCENE -->
-         <a-entity id="scene4" class="scene" visible="false">
+      <!-- 3th SCENE -->
+         <a-entity id="scene3" class="scene" visible="false">
             <a-cylinder class="interactive" position="-1.25 0.75 -4" scale="0.5 3 0.5" visible="false" drop="tube"
                 over="goal" goal='" Lets fix it now"'
                 fail='"Go find it"'>
               </a-cylinder>
         </a-entity>
       
-      <!-- 5th SCENE -->
-      <a-entity id="scene5" class="scene" visible="false">
+      <!-- 4th SCENE -->
+      <a-entity id="scene4" class="scene" visible="false">
             <a-cylinder class="interactive" position="-1.25 0.75 -4" scale="0.5 3 0.5" visible="false" drop="cookie"
                 over="goal" goal='"Stupid human!! I got no item, I gave it to alien"'
                 fail='"I am not giving you nothing"'>
@@ -89,13 +84,12 @@
         </a-entity>
    <!--prepei na parei to cookie -->
 
-      <!-- 6th SCENE -->
-        <a-entity id="scene6" class="scene" visible="false">
+      <!-- 5th SCENE -->
+        <a-entity id="scene5" class="scene" visible="false">
             <a-entity gltf-model="#cookie" scale=  pick="cookie"></a-entity>
         </a-entity>
+
       
-        <!-- 7th SCENE -->
-        <a-entity id="scene7" class="scene"></a-entity>
       
       <a-entity id="scene6" class="scene" visible="false">
             <a-cylinder class="interactive" position="-1.25 0.75 -4" scale="0.5 3 0.5" visible="false" drop="stardust"
@@ -105,8 +99,8 @@
         </a-entity>
 
       
-        <!-- 8th SCENE -->
-         <a-entity id="scene8" class="scene" visible="false">
+        <!-- 7th SCENE -->
+         <a-entity id="scene7" class="scene" visible="false">
             <a-entity gltf-model="#stardust" scale=  pick="stardust"></a-entity>
         </a-entity>
 
