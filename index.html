@@ -29,14 +29,15 @@ const MAP = [
     <a-scene cursor="rayOrigin: mouse" raycaster="objects: .interactive" game-logic>
 
         <!-- SPACE IMAGES -->
-        <a-assets>
-            <img id="sky1" src="town_inside.png">
-            <img id="sky2" src="town_inside.png">
-            <img id="sky3" src="town_inside.png">
-            <img id="sky4" src="town_inside.png">
-            <img id="sky5" src="store.png">
-            <img id="sky6" src="park.png">
-            <img id="sky7" src="dark_alley.png">
+          <a-assets timeout="10000">
+    <img id="sky1" crossorigin="anonymous" src="aphelion1.png">
+    <img id="sky2" crossorigin="anonymous" src="spaceship_inside.png">
+    <img id="sky3" crossorigin="anonymous" src="aphelion_mixanikos.png">
+    <img id="sky4" crossorigin="anonymous" src="town_inside.png">
+    <img id="sky5" crossorigin="anonymous" src="store.png">
+    <img id="sky6" crossorigin="anonymous" src="park.png">
+    <img id="sky7" crossorigin="anonymous" src="dark_alley.png">
+</a-assets>
             <a-asset-item id="cookie" src="cookie.glb"></a-asset-item>
             <a-asset-item id="tube" src="tube.glb"></a-asset-item>
             <a-asset-item id="stardust" src="stardust.glb"></a-asset-item>
@@ -47,7 +48,7 @@ const MAP = [
 
           
         </a-assets>
-       <a-sky id="sky" src="#sky1" rotation="0 -90 0"></a-sky>
+      <a-sky id="sky" src="#sky1" rotation="0 -90 0"></a-sky>
 
         <!-- CAMERA & STORYBOARD -->
         <a-camera wasd-controls="enabled:false">
