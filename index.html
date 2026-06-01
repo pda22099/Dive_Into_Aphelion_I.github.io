@@ -92,27 +92,25 @@ const MAP = [
     </a-box>
 
 </a-entity>
-
 <!-- 5th SCENE -->
 <a-entity id="scene5" class="scene" visible="false">
 
-    <!-- Το κανονικό cookie όπως το θες να φαίνεται -->
-    <a-entity 
-        id="cookieModel"
-        gltf-model="#cookie"
-        position="-4.3 -2 -8"
-        scale="0.04 0.04 0.04"
-        rotation="30 0 0">
-    </a-entity>
-
-    <!-- Αόρατο μεγαλύτερο clickable box για να γίνεται pick πιο εύκολα -->
     <a-box
         class="interactive"
         position="-4.3 -2 -8"
-        scale="1.3 1.3 1.3"
+        width="2.5"
+        height="2.5"
+        depth="2.5"
         material="opacity: 0.01; transparent: true"
-        pick="cookie"
-        onclick="document.querySelector('#cookieModel').remove();">
+        pick="cookie">
+
+        <a-entity 
+            gltf-model="#cookie"
+            position="0 0 0"
+            scale="0.04 0.04 0.04"
+            rotation="30 0 0">
+        </a-entity>
+
     </a-box>
 
 </a-entity>
