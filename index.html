@@ -78,12 +78,19 @@ const MAP = [
       
       <!-- 4th SCENE -->
       <a-entity id="scene4" class="scene" visible="false">
-            <a-cylinder class="interactive" position="-1.25 0.75 -4" scale="0.5 3 0.5" visible="false" drop="cookie"
-                over="goal" goal='"Stupid human!! I got no tube, I gave it to drugie at park"'
-                fail='"So you want a tube I heard huh? Cookie for the tube"'>
-            </a-cylinder>
-        </a-entity>
-   <!--prepei na parei to cookie -->
+
+    <!-- Invisible clickable area πάνω στον εξωγήινο αριστερά -->
+    <a-box 
+        class="interactive"
+        position="-3 1.5 -3"
+        scale="1.5 2 0.2"
+        material="opacity: 0; transparent: true"
+        drop="cookie"
+        goal='"Stupid human!! I got no tube, I gave it to drugie at park"'
+        fail='"So you want a tube I heard huh? Cookie for the tube"'>
+    </a-box>
+
+</a-entity>
 
       <!-- 5th SCENE -->
         <a-entity id="scene5" class="scene" visible="false">
