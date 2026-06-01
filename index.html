@@ -96,17 +96,23 @@ const MAP = [
 <!-- 5th SCENE -->
 <a-entity id="scene5" class="scene" visible="false">
 
-<a-entity 
-    class="interactive"
-    gltf-model="#cookie"
-    position="-4.3 -2 -8"
-    scale="0.04 0.04 0.04"
-    rotation="30 0 0"
-    pick="cookie">
-</a-entity>
+    <a-box
+        class="interactive"
+        position="-4.3 -2 -8"
+        scale="1.5 1.5 1.5"
+        material="opacity: 0.01; transparent: true"
+        pick="cookie">
+
+        <a-entity 
+            gltf-model="#cookie"
+            position="0 0 0"
+            scale="0.04 0.04 0.04"
+            rotation="30 0 0">
+        </a-entity>
+
+    </a-box>
 
 </a-entity>
-    
       <!-- 6th SCENE -->
 <a-entity id="scene6" class="scene" visible="false">
 
