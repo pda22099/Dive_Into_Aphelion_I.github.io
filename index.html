@@ -22,12 +22,12 @@ const TEXT = [
     'The stardust might be somewhere around here.\nLets just find it quickly.\nWE ARE RUNNING OUT  OF TIME'
 ];
 
-// SOUND FUNCTION
-function playNPCInfo() {
-    const audio = document.querySelector('#NPCinfo');
+// GENERAL SOUND FUNCTION
+function playSound(soundId) {
+    const audio = document.querySelector('#' + soundId);
 
     if (!audio) {
-        console.log('NPC audio not found');
+        console.log(soundId + ' audio not found');
         return;
     }
 
@@ -61,7 +61,10 @@ function playNPCInfo() {
             <a-asset-item id="tube" src="tube.glb"></a-asset-item>
             <a-asset-item id="stardust" src="stardust.glb"></a-asset-item>
 
-            <audio id="NPCinfo" src="NPCinfo.mp3" preload="auto"></audio>
+            <!-- SOUNDS -->
+            <audio id="NPCmerchant" src="NPCmerchant.mp3" preload="auto"></audio>
+            <audio id="NPCmechanic" src="NPCmechanic.mp3" preload="auto"></audio>
+            <audio id="COLLECTsound" src="COLLECTsound.mp3" preload="auto"></audio>
         </a-assets>
 
         <a-sky id="sky" src="#sky1" rotation="0 -90 0"></a-sky>
@@ -100,7 +103,7 @@ function playNPCInfo() {
             </a-cylinder>
         </a-entity>
 
-        <!-- 4th SCENE -->
+        <!-- 4th SCENE - MERCHANT NPC -->
         <a-entity id="scene4" class="scene" visible="false">
 
             <a-box 
@@ -108,7 +111,7 @@ function playNPCInfo() {
                 position="-8.8 0.1 -5"
                 scale="8 4 0.2"
                 material="opacity: 0.01; transparent: true"
-                onclick="playNPCInfo()"
+                onclick="playSound('NPCmerchant')"
                 drop="cookie"
                 goal='"Stupid human!! I got no tube, I gave it to drugie at park"'
                 fail='"So you want a tube I heard huh? Cookie for the tube"'>
@@ -116,7 +119,7 @@ function playNPCInfo() {
 
         </a-entity>
 
-        <!-- 5th SCENE -->
+        <!-- 5th SCENE - COOKIE COLLECT -->
         <a-entity id="scene5" class="scene" visible="false">
 
             <a-entity
@@ -124,6 +127,7 @@ function playNPCInfo() {
                 position="-3.5 -1.2 -8"
                 geometry="primitive: box; width: 3; height: 1.5; depth: 3"
                 material="opacity: 0.01; transparent: true"
+                onclick="playSound('COLLECTsound')"
                 pick="cookie">
 
                 <a-entity 
@@ -137,7 +141,7 @@ function playNPCInfo() {
 
         </a-entity>
 
-        <!-- 6th SCENE -->
+        <!-- 6th SCENE - MECHANIC NPC -->
         <a-entity id="scene6" class="scene" visible="false">
 
             <a-box 
@@ -145,6 +149,7 @@ function playNPCInfo() {
                 position="0 1 -3"
                 scale="2.5 3 0.2"
                 material="opacity: 0.01; transparent: true"
+                onclick="playSound('NPCmechanic')"
                 drop="stardust"
                 pick="tube"
                 goal='"Thaaaanks dude".\nHere is your tube"'
@@ -153,7 +158,7 @@ function playNPCInfo() {
 
         </a-entity>
 
-        <!-- 7th SCENE -->
+        <!-- 7th SCENE - STARDUST COLLECT -->
         <a-entity id="scene7" class="scene" visible="false">
 
             <a-entity 
@@ -162,6 +167,7 @@ function playNPCInfo() {
                 position="8 -6 -9"
                 scale="0.2 0.2 0.2"
                 rotation="0 20 90"
+                onclick="playSound('COLLECTsound')"
                 pick="stardust">
             </a-entity>
 
@@ -170,4 +176,3 @@ function playNPCInfo() {
     </a-scene>
 </body>
 </html>
-
