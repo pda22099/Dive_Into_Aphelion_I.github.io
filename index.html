@@ -11,6 +11,10 @@ const MAP = [
 
 let ITEMS = [];
 
+// Για να μην παίζουν συνέχεια οι NPC ήχοι
+window.merchantSoundPlayed = false;
+window.mechanicSoundPlayed = false;
+
 // MAIN INFO: enter the scenes welcome text (ascending order)
 const TEXT = [
     '"OH NOO...Our spaceship crashed.\nThe engine needs to be fixed\nI need to find a tube."',
@@ -111,7 +115,7 @@ function playSound(soundId) {
                 position="-8.8 0.1 -5"
                 scale="8 4 0.2"
                 material="opacity: 0.01; transparent: true"
-                onclick="if (!ITEMS.includes('cookie')) playSound('NPCmerchant')"
+                onclick="if (!window.merchantSoundPlayed && !ITEMS.includes('cookie')) { window.merchantSoundPlayed = true; playSound('NPCmerchant'); }"
                 drop="cookie"
                 goal='"Stupid human!! I got no tube, I gave it to drugie at park"'
                 fail='"So you want a tube I heard huh? Cookie for the tube"'>
@@ -149,7 +153,7 @@ function playSound(soundId) {
                 position="0 1 -3"
                 scale="2.5 3 0.2"
                 material="opacity: 0.01; transparent: true"
-                onclick="if (!ITEMS.includes('stardust')) playSound('NPCmechanic')"
+                onclick="if (!window.mechanicSoundPlayed && !ITEMS.includes('stardust')) { window.mechanicSoundPlayed = true; playSound('NPCmechanic'); }"
                 drop="stardust"
                 pick="tube"
                 goal='"Thaaaanks dude".\nHere is your tube"'
